@@ -1,38 +1,65 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Littlexx 个人作品集</title>
+    <title>LittleXx Art</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 顶部背景 -->
     <header>
-        <h1> Littlexx 的个人作品集</h1>
-        <nav>
-            <a href="painting.html">绘画</a>
-            <a href="3d.html">3D 作品</a>
-            <a href="interactive_installation.html">交互装置</a>
-            <a href="interactive_software.html">交互软件</a>
-            <a href="about.html">关于</a>
-            <a href="contact.html">联系</a>
-        </nav>
+        <div class="hero">
+            <h1>LittleXx Art</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search artworks...">
+        </div>
     </header>
 
-    <section class="intro">
-        <h2>欢迎来到我的作品展示页面</h2>
-        <p>这里是我的艺术、设计和研究作品。</p>
-    </section>
-
+    <!-- 作品展示 -->
     <section class="gallery">
-        <div class="item"><img src="images/art1.jpg" alt="绘画作品"></div>
-        <div class="item"><img src="images/art2.jpg" alt="3D 作品"></div>
-        <div class="item"><img src="images/art3.jpg" alt="交互装置"></div>
-        <div class="item"><img src="images/art4.jpg" alt="交互软件"></div>
+        <!-- 3D 作品 -->
+        <div class="category">
+            <h2>3D Works</h2>
+        </div>
+        <div class="artworks">
+            <div class="item">
+                <a href="dying_kilns.html">
+                    <img src="images/3d/dying_kins1.jpg" alt="Dying Kilns">
+                </a>
+                <h3>Dying Kilns（寄死窑）</h3>
+            </div>
+            <div class="item">
+                <a href="miles_to_recognization.html">
+                    <img src="images/3d/miles.jpg" alt="Miles to Recognization">
+                </a>
+                <h3>Miles to Recognization（和解之路漫漫）</h3>
+            </div>
+        </div>
+
+        <!-- 交互装置 -->
+        <div class="category">
+            <h2>Interactive Installations</h2>
+        </div>
+        <div class="artworks">
+            <div class="item">
+                <a href="spiral_of_silence.html">
+                    <img src="images/installation/spiral.jpg" alt="The Spiral of Silence">
+                </a>
+                <h3>The Spiral of Silence（沉默的螺旋）</h3>
+            </div>
+            <div class="item">
+                <a href="sleep_everywhere.html">
+                    <img src="images/installation/sleep.jpg" alt="Sleep Everywhere">
+                </a>
+                <h3>Sleep Everywhere（无处不眠）</h3>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>© 2025 Littlexx. All rights reserved.</p>
+        <p>© 2025 LittleXx Art. All rights reserved.</p>
     </footer>
 </body>
 </html>
