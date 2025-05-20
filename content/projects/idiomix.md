@@ -7,4 +7,4 @@ Slug: idiomix
 
 
 - **Technique**: Python  
-- **Link**: [查看源码](git@git.arts.ac.uk:24007516/NLP_Project_Xiaoxin_Xiang.git)
+- **Link**: [查看源码](https://github.com/littlexx15/Idiomix.git)
