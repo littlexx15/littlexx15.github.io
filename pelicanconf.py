@@ -1,5 +1,6 @@
 # pelicanconf.py
-# 输入指令“pelican content -o output -s pelicanconf.py” output目录下就会生成html文件部署静态页面
+# # 用 Pelican 把网页输出到 docs/ 文件夹
+# 输入指令 pelican content -o docs -s pelicanconf.py
 # ──────────────────────────────────────────────────────────
 # 站点基本信息
 # ──────────────────────────────────────────────────────────
