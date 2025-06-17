@@ -1,0 +1,23 @@
+/* 限制文章中所有图片最大宽度为600px，高度自适应 */
+.article-content img {
+    max-width: 600px;
+    height: auto;
+    /* 左浮动对齐，右侧文本环绕 */
+    float: left;
+    margin: 0 1em 1em 0;
+    /* 1px 细线边框，浅灰色 */
+    border: 1px solid #ccc;
+    /* 保证块级元素行为更一致 */
+    display: block;
+  }
+  
+  /* content/extra/custom.css */
+
+/* 之前的图片样式… */
+
+/* 新增：隐藏所有文章列表和详情页的作者行 */
+.byline,
+.article-details .byline,
+.article-header .byline {
+  display: none !important;
+}
