@@ -4,6 +4,6 @@ Category: Drawings
 Tags: Sketch
 Slug: a-peaceful-bed
 
-![A Peaceful Bed](../images/a-peaceful-bed.png)
+<img src="../images/a-peaceful-bed.png" alt="A Peaceful Bed" style="width: 60%;">
 
 
