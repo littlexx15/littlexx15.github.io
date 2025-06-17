@@ -6,4 +6,4 @@ Slug: miles-to-reconciliation
 
 
 - **Technique**: Unity, Photography  
-- **Link**: [查看视频](https://youtu.be/f14DEIWy1AI?si=ph2TBa5lIPLR4iZ0)
+- **Link**: [Watch Full Video](https://youtu.be/f14DEIWy1AI?si=ph2TBa5lIPLR4iZ0)

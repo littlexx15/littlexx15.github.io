@@ -7,4 +7,4 @@ Slug: sleep-everywhere
 
 
 - **Technique**: Processing 
-- **Link**: [查看视频](https://youtu.be/cGU8NKFzvJ4?si=e5ikRum0vz6AWSVZ)
+- **Link**: [Watch Full Video](https://youtu.be/cGU8NKFzvJ4?si=e5ikRum0vz6AWSVZ)

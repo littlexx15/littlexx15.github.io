@@ -6,4 +6,4 @@ Slug: dying-kilns
 
 
 - **Technique**: Unity, blender
-- **Link**: [查看视频](https://youtu.be/DTt73CQfBfw?si=9H9kZSdOIPqvPxoL)
+- **Link**: [Watch Full Video](https://youtu.be/DTt73CQfBfw?si=9H9kZSdOIPqvPxoL)

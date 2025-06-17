@@ -7,4 +7,4 @@ Slug: metatone-lab
 
 
 - **Technique**: Python  
-- **Link**: [查看源码](https://github.com/littlexx15/AI-4-Media-Project-XiaoxinXiang.git)
+- **Link**: [View Source Code](https://github.com/littlexx15/AI-4-Media-Project-XiaoxinXiang.git)

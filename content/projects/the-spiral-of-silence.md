@@ -6,4 +6,4 @@ Slug: the-spiral-of-silence
 
 
 - **Technique**: Processing, Arduino, 3d print
-- **Link**: [查看视频](https://youtu.be/2Ku8x_Vs4Tk?si=_9pvCaTEMGuaRtxZ)
+- **Link**: [Watch Full Video](https://youtu.be/2Ku8x_Vs4Tk?si=_9pvCaTEMGuaRtxZ)

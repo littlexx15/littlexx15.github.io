@@ -7,4 +7,4 @@ Slug: idiomix
 
 
 - **Technique**: Python  
-- **Link**: [查看源码](https://github.com/littlexx15/Idiomix.git)
+- **Link**: [View Source Code](https://github.com/littlexx15/Idiomix.git)

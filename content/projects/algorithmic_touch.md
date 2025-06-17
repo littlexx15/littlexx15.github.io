@@ -7,4 +7,4 @@ Slug: Algorithmic Touch
 
 
 - **Technique**: Python  
-- **Link**: [查看源码](https://github.com/littlexx15/Algorithmic-Touch.git)
+- **Link**: [View Source Code](https://github.com/littlexx15/Algorithmic-Touch.git)
