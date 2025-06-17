@@ -1,4 +1,4 @@
-Title: A Peaceful Bed
+Title: 《一张安稳的睡床》A Peaceful Bed
 Date: 2019-11-30
 Category: Drawings
 Tags: Sketch
