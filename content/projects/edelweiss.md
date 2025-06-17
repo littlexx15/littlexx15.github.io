@@ -7,4 +7,5 @@ Slug: edelweiss
 
 
 - **Technique**: Python  
-- **Link**: [查看源码](https://git.arts.ac.uk/24007516/stem-24-25-xiaoxinxiang)
+- **Code Link**: [查看源码](https://git.arts.ac.uk/24007516/stem-24-25-xiaoxinxiang)  
+- **Video Demo**: [观看视频](https://youtu.be/cmFEFheOGcY)
