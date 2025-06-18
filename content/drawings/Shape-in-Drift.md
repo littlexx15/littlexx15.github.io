@@ -5,7 +5,7 @@ Tags: Mixed Media
 Slug: Shape-in-Drift
 
 
-<div style="display:  flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-  <img src="../images/Shape-in-Drift.jpeg" alt="Shape-in-Drift" style="max-width: 100%; max-height: 600px; height: auto; object-fit: contain;">
+<div class="drawing-gallery">
+  <img src="../images/Shape-in-Drift.jpeg" alt="Shape-in-Drift">
 </div>
 

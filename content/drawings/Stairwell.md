@@ -5,7 +5,7 @@ Tags: Sketch
 Slug: Stairwell
 
 
-<div style="display:  flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-  <img src="../images/Stairwell.png" alt="A Peaceful Bed 1" style="max-width: 100%; max-height: 600px; height: auto; object-fit: contain;">
+<div class="drawing-gallery">
+  <img src="../images/Stairwell.png" alt="A Peaceful Bed 1">
 </div>
 

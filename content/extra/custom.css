@@ -21,3 +21,28 @@
 .article-header .byline {
   display: none !important;
 }
+
+/* —— 专门给绘画走廊画廊的布局 —— */
+.drawing-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.drawing-gallery img {
+  flex: 1 1 40%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+  /* 如果想要边框或阴影，可以额外加 */
+  /* border: 1px solid #ccc; */
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+}
+
+@media screen and (max-width: 800px) {
+  .drawing-gallery img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

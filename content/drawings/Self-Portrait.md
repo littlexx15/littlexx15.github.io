@@ -5,7 +5,7 @@ Tags: procreate
 Slug: Self-Portrait
 
 
-<div style="display:  flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-  <img src="../images/Self-Portrait.jpeg" alt="A Peaceful Bed 1" style="max-width: 100%; max-height: 600px; height: auto; object-fit: contain;">
+<div class="drawing-gallery">
+  <img src="../images/Self-Portrait.jpeg" alt="A Peaceful Bed 1">
 </div>
 
