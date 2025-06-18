@@ -89,5 +89,9 @@ DISPLAY_AUTHOR  = False
 # 让 Pelican 从模板覆盖目录优先读取
 THEME_TEMPLATES_OVERRIDES = ['templates']
 
+# 分类页面 URL 设置（生成 category/slug.html）
+CATEGORY_URL = 'category/{slug}.html'
+CATEGORY_SAVE_AS = 'category/{slug}.html'
+
 
 
