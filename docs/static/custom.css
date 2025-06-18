@@ -31,14 +31,13 @@
 }
 
 .drawing-gallery img {
-  flex: 1 1 40%;
-  max-width: 600px;
+  max-height: 20vh;  /* 不超过屏幕高度的1/5 */
   height: auto;
+  width: auto;
+  max-width: 100%;
   object-fit: contain;
-  /* 如果想要边框或阴影，可以额外加 */
-  /* border: 1px solid #ccc; */
-  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
 }
+
 
 @media screen and (max-width: 800px) {
   .drawing-gallery img {
