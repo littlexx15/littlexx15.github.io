@@ -3,7 +3,7 @@ Date: 2019-11-30
 Category: Drawings
 Tags: Sketch
 Slug: a-peaceful-bed
-Status: hidden
+
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
   <img src="../images/a-peaceful-bed.png" alt="A Peaceful Bed 1"

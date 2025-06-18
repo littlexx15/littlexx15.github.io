@@ -3,7 +3,7 @@ Date: 2019-11-8
 Category: Drawings
 Tags: Marker
 Slug: Sitting-Still
-Status: hidden
+
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
   <img src="../images/Courtyard-Cat.png" alt="Sitting Still"
