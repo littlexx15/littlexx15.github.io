@@ -3,8 +3,9 @@ Date: 2022-2-16
 Category: Drawings
 Tags: Mixed Media
 Slug: Shape-in-Drift
+Status: hidden
 
-<div style="display: flex; gap: 20px;">
-  <img src="../images/Shape-in-Drift.jpeg" alt="Shape-in-Drift" style="max-height: 400px;">
+<div style="display:  flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+  <img src="../images/Shape-in-Drift.jpeg" alt="Shape-in-Drift" style="max-width: 100%; max-height: 600px; height: auto; object-fit: contain;">
 </div>
 

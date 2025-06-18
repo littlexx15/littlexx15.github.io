@@ -3,7 +3,8 @@ Date: 2024-8-19
 Category: Drawings
 Tags: Gansai
 Slug: Lotus
+Status: hidden
 
-<div style="display: flex; gap: 20px;">
-  <img src="../images/Lotus.jpg" alt="A Peaceful Bed 1" style="max-height: 400px;">
+<div style="display:  flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+  <img src="../images/Lotus.jpg" alt="A Peaceful Bed 1" style="max-width: 100%; max-height: 600px; height: auto; object-fit: contain;">
 </div>

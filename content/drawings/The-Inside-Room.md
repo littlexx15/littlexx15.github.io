@@ -3,8 +3,9 @@ Date: 2020-5-30
 Category: Drawings
 Tags: water color
 Slug: The-Inside-Room
+Status: hidden
 
-<div style="display: flex; gap: 20px;">
-  <img src="../images/The-Inside-Room.png" alt="A Peaceful Bed 1" style="max-height: 400px;">
+<div style="display:  flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+  <img src="../images/The-Inside-Room.png" alt="A Peaceful Bed 1" style="max-width: 100%; max-height: 600px; height: auto; object-fit: contain;">
 </div>
 
