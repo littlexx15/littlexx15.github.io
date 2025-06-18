@@ -1,3 +1,4 @@
+{# templates/base.html #}
 {% extends "!simple/base.html" %}
 
 {%- block head %}
@@ -54,4 +55,28 @@
   <!-- 引入自定义 CSS -->
   <link rel="stylesheet" href="{{ SITEURL }}/static/custom.css" />
 </head>
+{%- endblock %}
+
+
+{%- block body %}
+  {{ super() }}
+{%- endblock %}
+
+
+{# 页脚，渲染社交链接 #}
+{%- block footer %}
+<footer class="site-footer" style="margin-top: 2em; padding: 1em 0; border-top: 1px solid #eee;">
+  {% if SOCIAL %}
+    <ul class="social-links" style="list-style:none; padding:0; display:flex; gap:1em;">
+    {% for name, link in SOCIAL %}
+      <li>
+        <a href="{{ link }}" target="_blank" rel="noopener" style="text-decoration:none;">
+          {{ name }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  <p style="font-size:0.8em; color:#666;">&copy; {{ SITENAME }}</p>
+</footer>
 {%- endblock %}
