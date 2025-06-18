@@ -21,27 +21,30 @@
 .article-header .byline {
   display: none !important;
 }
-
 /* —— 专门给绘画走廊画廊的布局 —— */
 .drawing-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: flex-start; /* 改成左对齐，不要居中 */
 }
 
 .drawing-gallery img {
-  max-height: 20vh;  /* 不超过屏幕高度的1/5 */
-  height: auto;
+  /* 高度不超过屏幕高度的 30% */
+  max-height: 30vh;
+  /* 宽度按比例自适应，不超过容器 */
   width: auto;
   max-width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
-
+/* 手机/窄屏 单列 */
 @media screen and (max-width: 800px) {
   .drawing-gallery img {
     flex: 1 1 100%;
     max-width: 100%;
+    /* 如果想在手机也限制高度可加，否则去掉 */
+    /* max-height: 30vh; */
   }
 }
