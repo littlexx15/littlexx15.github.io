@@ -27,11 +27,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+
 }
 
 .drawing-gallery img {
-  max-height: 20vh;  /* 不超过屏幕高度的1/5 */
+  max-height: 30vh;  /* 不超过屏幕高度的1/5 */
   height: auto;
   width: auto;
   max-width: 100%;
