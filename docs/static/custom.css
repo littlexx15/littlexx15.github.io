@@ -45,6 +45,6 @@
     flex: 1 1 100%;
     max-width: 100%;
     /* 如果想在手机也限制高度可加，否则去掉 */
-    /* max-height: 30vh; */
+    max-height: 30vh;
   }
 }
