@@ -1,0 +1,50 @@
+/* 限制文章中所有图片最大宽度为600px，高度自适应 */
+.article-content img {
+    max-width: 600px;
+    height: auto;
+    /* 左浮动对齐，右侧文本环绕 */
+    float: left;
+    margin: 0 1em 1em 0;
+    /* 1px 细线边框，浅灰色 */
+    border: 1px solid #ccc;
+    /* 保证块级元素行为更一致 */
+    display: block;
+  }
+  
+  /* content/extra/custom.css */
+
+/* 之前的图片样式… */
+
+/* 新增：隐藏所有文章列表和详情页的作者行 */
+.byline,
+.article-details .byline,
+.article-header .byline {
+  display: none !important;
+}
+/* —— 专门给绘画走廊画廊的布局 —— */
+.drawing-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; /* 改成左对齐，不要居中 */
+}
+
+.drawing-gallery img {
+  /* 高度不超过屏幕高度的 30% */
+  max-height: 30vh;
+  /* 宽度按比例自适应，不超过容器 */
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 手机/窄屏 单列 */
+@media screen and (max-width: 800px) {
+  .drawing-gallery img {
+    flex: 1 1 100%;
+    max-width: 100%;
+    /* 如果想在手机也限制高度可加，否则去掉 */
+    max-height: 30vh;
+  }
+}
