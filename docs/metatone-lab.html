@@ -30,20 +30,22 @@
   <!-- 自定义 CSS -->
   <link rel="stylesheet" href="./static/custom.css" />
 
-  <!-- 语言切换通用样式（按钮在各页 content 里渲染） -->
+  <!-- 语言切换样式（用 class 切换，不在 style 里放 Jinja） -->
   <style>
     .lang-switch{
       position:fixed; top:14px; right:14px; z-index:9999;
       display:flex; gap:8px; padding:4px 6px; background:#fff;
       border:1px solid #e5e7eb; border-radius:999px;
     }
-    .lang-switch a{ text-decoration:none; padding:.25rem .6rem; border-radius:999px; color:#666; }
+    .lang-switch a{
+      text-decoration:none; padding:.25rem .6rem; border-radius:999px; color:#666;
+    }
     .lang-switch a.active{ background:#111; color:#fff; }
   </style>
 </head>  </head>
 
   <body>
-      <header>
+        <header>
           <hgroup><h1><a href="./">Xiaoxin's work</a></h1></hgroup>
           <nav><ul>
                 <li><a href="./category/computer-vision.html" >Computer Vision</a></li>
@@ -55,14 +57,7 @@
           </ul></nav>
       </header>
       <main>
-
-
-<nav class="lang-switch">
-  <a href="./zh/" onclick="setPrefLang('zh')" class="">中文</a>
-  <a href="." onclick="setPrefLang('en')" class="active">EN</a>
-</nav>
-
-<ul>
+  <ul>
 <li><strong>Technique</strong>: Python  </li>
 <li><strong>Link</strong>: <a href="https://github.com/littlexx15/AI-4-Media-Project-XiaoxinXiang.git">View Source Code</a></li>
 </ul>
@@ -89,21 +84,35 @@
   <p style="font-size:0.8em; color:#666;">&copy; Xiaoxin's work</p>
 </footer>
 
-<!-- 首访：未保存偏好且访问根路径时，强制跳 /zh/ -->
+<!-- 首访自动根据浏览器语言引导一次，并记住偏好 -->
 <script>
 (function () {
   var KEY = 'pref_lang';
   window.setPrefLang = function (lang) { try { localStorage.setItem(KEY, lang); } catch(e) {} };
+
   try {
     var saved = localStorage.getItem(KEY);
     var path = location.pathname.replace(/index\.html$/, '');
     var isRoot = (path === '/' || path === '');
     if (!saved && isRoot) {
-      localStorage.setItem(KEY, 'zh');
-      location.replace('./zh/');
+      var nav = (navigator.language || '').toLowerCase();
+      if (nav.startsWith('zh')) {
+        localStorage.setItem(KEY, 'zh');
+        location.replace('./zh/');
+      } else {
+        localStorage.setItem(KEY, 'en');
+      }
     }
   } catch (e) {}
 })();
 </script>      </footer>
-  </body>
+
+
+  <nav class="lang-switch">
+
+
+
+    <a href="./zh/" onclick="setPrefLang('zh')" class="">中文</a>
+    <a href="." onclick="setPrefLang('en')" class="active">EN</a>
+  </nav>  </body>
 </html>

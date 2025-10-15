@@ -55,21 +55,52 @@
   <!-- 自定义 CSS -->
   <link rel="stylesheet" href="{{ SITEURL }}/static/custom.css" />
 
-  <!-- 语言切换通用样式（按钮在各页 content 里渲染） -->
+  <!-- 语言切换样式（用 class 切换，不在 style 里放 Jinja） -->
   <style>
     .lang-switch{
       position:fixed; top:14px; right:14px; z-index:9999;
       display:flex; gap:8px; padding:4px 6px; background:#fff;
       border:1px solid #e5e7eb; border-radius:999px;
     }
-    .lang-switch a{ text-decoration:none; padding:.25rem .6rem; border-radius:999px; color:#666; }
+    .lang-switch a{
+      text-decoration:none; padding:.25rem .6rem; border-radius:999px; color:#666;
+    }
     .lang-switch a.active{ background:#111; color:#fff; }
   </style>
 </head>
 {%- endblock %}
 
-{# 注意：simple 主题不渲染 block body，这里不要放按钮 #}
 
+{%- block body %}
+  {{ super() }}
+
+  {# —— 顶部右上角语言切换（使用 translations 列表；不依赖 get_translation） —— #}
+  <nav class="lang-switch">
+    {% set cur_lang = (article.lang if (article is defined and article and article.lang) else DEFAULT_LANG) %}
+    {% set zh_url = None %}
+    {% set en_url = None %}
+
+    {% if article is defined and article %}
+      {% if article.translations %}
+        {% for tr in article.translations %}
+          {% if tr.lang == 'zh' %}{% set zh_url = tr.url %}{% endif %}
+          {% if tr.lang == 'en' %}{% set en_url = tr.url %}{% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+
+    {# 兜底：没对应译文就回站点入口 #}
+    {% if not zh_url %}{% set zh_url = SITEURL ~ '/zh/' %}{% endif %}
+    {% if not en_url %}{% set en_url = SITEURL or '/' %}{% endif %}
+
+    <a href="{{ zh_url }}" onclick="setPrefLang('zh')" class="{{ 'active' if cur_lang == 'zh' else '' }}">中文</a>
+    <a href="{{ en_url }}" onclick="setPrefLang('en')" class="{{ 'active' if cur_lang == 'en' else '' }}">EN</a>
+  </nav>
+
+{%- endblock %}
+
+
+{# 页脚，渲染社交链接 + 首访自动引导脚本 #}
 {%- block footer %}
 <footer class="site-footer" style="margin-top: 2em; padding: 1em 0; border-top: 1px solid #eee;">
   {% if SOCIAL %}
@@ -86,18 +117,24 @@
   <p style="font-size:0.8em; color:#666;">&copy; {{ SITENAME }}</p>
 </footer>
 
-<!-- 首访：未保存偏好且访问根路径时，强制跳 /zh/ -->
+<!-- 首访自动根据浏览器语言引导一次，并记住偏好 -->
 <script>
 (function () {
   var KEY = 'pref_lang';
   window.setPrefLang = function (lang) { try { localStorage.setItem(KEY, lang); } catch(e) {} };
+
   try {
     var saved = localStorage.getItem(KEY);
     var path = location.pathname.replace(/index\.html$/, '');
     var isRoot = (path === '/' || path === '');
     if (!saved && isRoot) {
-      localStorage.setItem(KEY, 'zh');
-      location.replace('{{ SITEURL }}/zh/');
+      var nav = (navigator.language || '').toLowerCase();
+      if (nav.startsWith('zh')) {
+        localStorage.setItem(KEY, 'zh');
+        location.replace('{{ SITEURL }}/zh/');
+      } else {
+        localStorage.setItem(KEY, 'en');
+      }
     }
   } catch (e) {}
 })();

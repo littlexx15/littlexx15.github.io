@@ -30,45 +30,36 @@
   <!-- 自定义 CSS -->
   <link rel="stylesheet" href="../static/custom.css" />
 
-  <!-- 语言切换通用样式（按钮在各页 content 里渲染） -->
+  <!-- 语言切换样式（用 class 切换，不在 style 里放 Jinja） -->
   <style>
     .lang-switch{
       position:fixed; top:14px; right:14px; z-index:9999;
       display:flex; gap:8px; padding:4px 6px; background:#fff;
       border:1px solid #e5e7eb; border-radius:999px;
     }
-    .lang-switch a{ text-decoration:none; padding:.25rem .6rem; border-radius:999px; color:#666; }
+    .lang-switch a{
+      text-decoration:none; padding:.25rem .6rem; border-radius:999px; color:#666;
+    }
     .lang-switch a.active{ background:#111; color:#fff; }
   </style>
 </head>  </head>
 
   <body>
-      <header>
+        <header>
           <hgroup><h1><a href="../">小欣的作品</a></h1></hgroup>
           <nav><ul>
                 <li><a href="../category/drawings.html"  aria-current="page" >Drawings</a></li>
           </ul></nav>
       </header>
       <main>
-
-<!-- 语言切换（分类页） -->
-<nav class="lang-switch">
-  <a href="../zh/" onclick="setPrefLang('zh')">中文</a>
-  <a href=".." onclick="setPrefLang('en')">EN</a>
-</nav>
-
 <section class="articles-list">
-  <h2>
-分类:
-    Drawings
-  </h2>
-
+  <h2>Category: Drawings</h2>
     <article class="summary">
       <h3 class="article-title">
         <a href="../Lotus.html">《莲》Lotus</a>
       </h3>
       <p class="metadata">
-创建时间: 2024-08-19
+        Created: 2024-08-19
       </p>
       <div class="drawing-gallery">
   <img src="../images/Lotus.jpg" alt="A Peaceful Bed 1">
@@ -79,7 +70,7 @@
         <a href="../The Small Spell.html">《小小咒语》The Small Spell</a>
       </h3>
       <p class="metadata">
-创建时间: 2022-03-01
+        Created: 2022-03-01
       </p>
       <div class="drawing-gallery">
   <img src="../images/The-Small-Spell.png" alt="The-Small-Spell.png">
@@ -90,7 +81,7 @@
         <a href="../Shape-in-Drift.html">《浮游之形》Shape in Drift</a>
       </h3>
       <p class="metadata">
-创建时间: 2022-02-16
+        Created: 2022-02-16
       </p>
       <div class="drawing-gallery">
   <img src="../images/Shape-in-Drift.jpeg" alt="Shape-in-Drift">
@@ -101,7 +92,7 @@
         <a href="../Self-Portrait.html">《自画像》Self-Portrait</a>
       </h3>
       <p class="metadata">
-创建时间: 2021-06-29
+        Created: 2021-06-29
       </p>
       <div class="drawing-gallery">
   <img src="../images/Self-Portrait.jpeg" alt="A Peaceful Bed 1">
@@ -112,7 +103,7 @@
         <a href="../Of Kin and Days.html">《亲缘》 Of Kin and Days</a>
       </h3>
       <p class="metadata">
-创建时间: 2020-12-30
+        Created: 2020-12-30
       </p>
       <div class="drawing-gallery">
   <img src="../images/Of-Kin-and-Days.jpg" alt="A Peaceful Bed 1">
@@ -124,7 +115,7 @@
         <a href="../The-Inside-Room.html">《里屋》The Inside Room</a>
       </h3>
       <p class="metadata">
-创建时间: 2020-05-30
+        Created: 2020-05-30
       </p>
       <div class="drawing-gallery">
   <img src="../images/The-Inside-Room.png" alt="A Peaceful Bed 1">
@@ -135,7 +126,7 @@
         <a href="../Fruit-Plate.html">《果盘》Fruit Plate</a>
       </h3>
       <p class="metadata">
-创建时间: 2020-05-27
+        Created: 2020-05-27
       </p>
       <div class="drawing-gallery">
   <img src="../images/Fruit-Plate.png" alt="A Peaceful Bed 1">
@@ -146,7 +137,7 @@
         <a href="../a-peaceful-bed.html">《一张安稳的睡床》A Peaceful Bed</a>
       </h3>
       <p class="metadata">
-创建时间: 2019-11-30
+        Created: 2019-11-30
       </p>
       <div class="drawing-gallery">
   <img src="../images/a-peaceful-bed.png" alt="A Peaceful Bed 1">
@@ -158,7 +149,7 @@
         <a href="../Sitting-Still.html">《庭院里的猫》Courtyard-Cat</a>
       </h3>
       <p class="metadata">
-创建时间: 2019-11-08
+        Created: 2019-11-08
       </p>
       <div class="drawing-gallery">
   <img src="../images/Courtyard-Cat.png" alt="Sitting Still">
@@ -169,7 +160,7 @@
         <a href="../Stairwell.html">《楼道》Stairwell</a>
       </h3>
       <p class="metadata">
-创建时间: 2019-11-07
+        Created: 2019-11-07
       </p>
       <div class="drawing-gallery">
   <img src="../images/Stairwell.png" alt="A Peaceful Bed 1">
@@ -199,21 +190,35 @@
   <p style="font-size:0.8em; color:#666;">&copy; 小欣的作品</p>
 </footer>
 
-<!-- 首访：未保存偏好且访问根路径时，强制跳 /zh/ -->
+<!-- 首访自动根据浏览器语言引导一次，并记住偏好 -->
 <script>
 (function () {
   var KEY = 'pref_lang';
   window.setPrefLang = function (lang) { try { localStorage.setItem(KEY, lang); } catch(e) {} };
+
   try {
     var saved = localStorage.getItem(KEY);
     var path = location.pathname.replace(/index\.html$/, '');
     var isRoot = (path === '/' || path === '');
     if (!saved && isRoot) {
-      localStorage.setItem(KEY, 'zh');
-      location.replace('../zh/');
+      var nav = (navigator.language || '').toLowerCase();
+      if (nav.startsWith('zh')) {
+        localStorage.setItem(KEY, 'zh');
+        location.replace('../zh/');
+      } else {
+        localStorage.setItem(KEY, 'en');
+      }
     }
   } catch (e) {}
 })();
 </script>      </footer>
-  </body>
+
+
+  <nav class="lang-switch">
+
+
+
+    <a href="../zh/" onclick="setPrefLang('zh')" class="active">中文</a>
+    <a href=".." onclick="setPrefLang('en')" class="">EN</a>
+  </nav>  </body>
 </html>
