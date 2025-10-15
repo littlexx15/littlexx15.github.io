@@ -1,28 +1,28 @@
 # pelicanconf.py
-# # 用 Pelican 把网页输出到 docs/ 文件夹
-# 输入指令“pelican content -o docs -s pelicanconf.py”
+# 用 Pelican 把网页输出到 docs/ 文件夹：
+# 运行：pelican content -o docs -s pelicanconf.py
+
 # ──────────────────────────────────────────────────────────
 # 站点基本信息
 # ──────────────────────────────────────────────────────────
-# AUTHOR      = ''
-SITENAME    = "Xiaoxin's work"
-SITEURL     = ''              # 本地调试留空；上线时改成你的域名
+SITENAME     = "Xiaoxin's work"
+SITEURL      = ""                 # 本地调试留空；上线时改成你的域名
 
 # ──────────────────────────────────────────────────────────
 # 内容路径与语言、时区
 # ──────────────────────────────────────────────────────────
-PATH        = 'content'       # 放 Markdown 文件的目录
-TIMEZONE    = 'Europe/Rome'
-DEFAULT_LANG= 'en'
+PATH         = "content"          # 放 Markdown 文件的目录
+TIMEZONE     = "Europe/Rome"
+DEFAULT_LANG = "en"               # 主站语言：英文（/）
 
 # ──────────────────────────────────────────────────────────
 # Feed 配置（开发时通常关闭）
 # ──────────────────────────────────────────────────────────
-FEED_ALL_ATOM        = None
-CATEGORY_FEED_ATOM   = None
-TRANSLATION_FEED_ATOM= None
-AUTHOR_FEED_ATOM     = None
-AUTHOR_FEED_RSS      = None
+FEED_ALL_ATOM         = None
+CATEGORY_FEED_ATOM    = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM      = None
+AUTHOR_FEED_RSS       = None
 
 # ──────────────────────────────────────────────────────────
 # 右侧链接与社交
@@ -38,62 +38,58 @@ SOCIAL = (
     ("GitHub", "https://github.com/littlexx15"),
     ("linkedin", "https://www.linkedin.com/in/xiaoxin-xiang/"),
     ("Instagram", "https://www.instagram.com/littlexx155/"),
-
 )
 
 # ──────────────────────────────────────────────────────────
 # 分页设置
 # ──────────────────────────────────────────────────────────
-DEFAULT_PAGINATION = False   # 一页展示所有文章；若想分页可改为 True 或数字
+DEFAULT_PAGINATION = False         # 一页展示所有文章；若想分页可改为 True 或数字
+DISPLAY_AUTHOR     = False         # 关掉作者显示（文章页与列表）
 
 # ──────────────────────────────────────────────────────────
 # 主题与 URL 设置
 # ──────────────────────────────────────────────────────────
-THEME           = 'themes/basic'
-RELATIVE_URLS   = True       # 本地调试时使用相对链接
+THEME               = "themes/basic"
+RELATIVE_URLS       = True         # 本地调试时使用相对链接
+THEME_TEMPLATES_OVERRIDES = ["templates"]  # 优先读取你自定义的 templates/
+
+# 分类页面 URL（如需）
+CATEGORY_URL      = "category/{slug}.html"
+CATEGORY_SAVE_AS  = "category/{slug}.html"
 
 # ──────────────────────────────────────────────────────────
 # 静态资源（图片 & 自定义 CSS）
 # ──────────────────────────────────────────────────────────
 STATIC_PATHS = [
-    'images',            # content/images/
-    'extra/custom.css',  # content/extra/custom.css
+    "images",             # content/images/
+    "extra/custom.css",   # content/extra/custom.css
 ]
 
 EXTRA_PATH_METADATA = {
-    'extra/custom.css': {'path': 'static/custom.css'},
+    "extra/custom.css": {"path": "static/custom.css"},
 }
 
 # ──────────────────────────────────────────────────────────
-# （可选）首页标题替换
+# 多语言（i18n_subsites）
+# pip install pelican-i18n-subsites Babel
 # ──────────────────────────────────────────────────────────
-# INDEX_TITLE = "My Projects 我的项目"
+PLUGINS = [
+    "i18n_subsites",      # 启用多语言子站
+]
 
-# ──────────────────────────────────────────────────────────
-# （可选）按日期排序，最新在前
-# ──────────────────────────────────────────────────────────
-# ARTICLE_ORDER_BY = 'date'
-# pelicanconf.py
+# 让 Jinja2 模板支持 i18n（模板中可用 gettext、trans 等）
+JINJA_ENVIRONMENT = {
+    "extensions": ["jinja2.ext.i18n"]
+}
 
-# …（前面已有内容省略）…
+# 为中文子站（/zh/）定义覆盖项
+I18N_SUBSITES = {
+    "zh": {
+        "SITENAME": "小欣的作品",
+        "LOCALE": "zh_CN",    # 影响日期/本地化格式
+        # 需要的话可在此处为中文站单独设置 THEME、MENUITEMS 等
+    }
+}
 
-# 主题与 URL 设置
-THEME           = 'themes/basic'
-RELATIVE_URLS   = True
-
-# 关闭文章页和列表中作者显示
-DISPLAY_AUTHOR  = False
-
-# …（后续已有静态资源、分页等配置）…
-# pelicanconf.py
-
-# … 其余配置不变 …
-# 让 Pelican 从模板覆盖目录优先读取
-THEME_TEMPLATES_OVERRIDES = ['templates']
-
-# 分类页面 URL 设置（生成 category/slug.html）
-CATEGORY_URL = 'category/{slug}.html'
-CATEGORY_SAVE_AS = 'category/{slug}.html'
-
-
-
+# 模板的“默认翻译语言”（可保持为主站语言）
+I18N_TEMPLATES_LANG = "en"

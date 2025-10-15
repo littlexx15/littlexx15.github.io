@@ -3,6 +3,7 @@ Date: 2025-03-20 10:00
 Category: Generative AI
 Tags: Python
 Slug: metatone-lab
+Lang: en
 
 
 

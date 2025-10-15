@@ -5,12 +5,10 @@
       <meta charset="utf-8" />
       <meta name="generator" content="Pelican" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Xiaoxin's work Full Atom Feed" />
-        <link href="/feeds/vr.atom.xml" type="application/atom+xml" rel="alternate" title="Xiaoxin's work Categories Atom Feed" />
 
-  <link rel="stylesheet" href="/theme/css/rdark.css" />
-  <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-  <link href="/" type="application/atom+xml" rel="alternate" title="Xiaoxin's work ATOM Feed" /><!--[if IE]>
+  <link rel="stylesheet" href="../theme/css/rdark.css" />
+  <link rel="stylesheet" type="text/css" href="../theme/css/main.css" />
+  <link href="../" type="application/atom+xml" rel="alternate" title="Xiaoxin's work ATOM Feed" /><!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
@@ -24,36 +22,58 @@
           ".MathJax .mo, .MathJax .mi": {color: "black ! important"}
         }
       },
-      tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']], processEscapes: true}
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true}
     });
   </script>
   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 
-  <!-- 引入自定义 CSS -->
-  <link rel="stylesheet" href="/static/custom.css" />
+  <!-- 自定义 CSS -->
+  <link rel="stylesheet" href="../static/custom.css" />
+
+  <!-- 语言切换通用样式（按钮在各页 content 里渲染） -->
+  <style>
+    .lang-switch{
+      position:fixed; top:14px; right:14px; z-index:9999;
+      display:flex; gap:8px; padding:4px 6px; background:#fff;
+      border:1px solid #e5e7eb; border-radius:999px;
+    }
+    .lang-switch a{ text-decoration:none; padding:.25rem .6rem; border-radius:999px; color:#666; }
+    .lang-switch a.active{ background:#111; color:#fff; }
+  </style>
 </head>  </head>
 
   <body>
-        <header>
-          <hgroup><h1><a href="/">Xiaoxin's work</a></h1></hgroup>
+      <header>
+          <hgroup><h1><a href="../">Xiaoxin's work</a></h1></hgroup>
           <nav><ul>
-                <li><a href="/category/computer-vision.html" >Computer Vision</a></li>
-                <li><a href="/category/drawings.html" >Drawings</a></li>
-                <li><a href="/category/experimental-images.html" >experimental images</a></li>
-                <li><a href="/category/generative-ai.html" >Generative AI</a></li>
-                <li><a href="/category/interactive-installation.html" >interactive installation</a></li>
-                <li><a href="/category/vr.html"  aria-current="page" >VR</a></li>
+                <li><a href="../category/computer-vision.html" >Computer Vision</a></li>
+                <li><a href="../category/drawings.html" >Drawings</a></li>
+                <li><a href="../category/experimental-images.html" >experimental images</a></li>
+                <li><a href="../category/generative-ai.html" >Generative AI</a></li>
+                <li><a href="../category/interactive-installation.html" >interactive installation</a></li>
+                <li><a href="../category/vr.html"  aria-current="page" >VR</a></li>
           </ul></nav>
       </header>
       <main>
+
+<!-- 语言切换（分类页） -->
+<nav class="lang-switch">
+  <a href="../zh/" onclick="setPrefLang('zh')">中文</a>
+  <a href=".." onclick="setPrefLang('en')">EN</a>
+</nav>
+
 <section class="articles-list">
-  <h2>Category: VR</h2>
+  <h2>
+Category:
+    VR
+  </h2>
+
     <article class="summary">
       <h3 class="article-title">
-        <a href="/dying-kilns.html">Dying Kilns</a>
+        <a href="../dying-kilns.html">Dying Kilns</a>
       </h3>
       <p class="metadata">
-        Created: 2023-01-18
+Created: 2023-01-18
       </p>
       <ul>
 <li><strong>Technique</strong>: Unity, blender</li>
@@ -82,6 +102,23 @@
       </li>
     </ul>
   <p style="font-size:0.8em; color:#666;">&copy; Xiaoxin's work</p>
-</footer>      </footer>
+</footer>
+
+<!-- 首访：未保存偏好且访问根路径时，强制跳 /zh/ -->
+<script>
+(function () {
+  var KEY = 'pref_lang';
+  window.setPrefLang = function (lang) { try { localStorage.setItem(KEY, lang); } catch(e) {} };
+  try {
+    var saved = localStorage.getItem(KEY);
+    var path = location.pathname.replace(/index\.html$/, '');
+    var isRoot = (path === '/' || path === '');
+    if (!saved && isRoot) {
+      localStorage.setItem(KEY, 'zh');
+      location.replace('../zh/');
+    }
+  } catch (e) {}
+})();
+</script>      </footer>
   </body>
 </html>

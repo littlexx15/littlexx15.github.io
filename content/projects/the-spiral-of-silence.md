@@ -3,6 +3,7 @@ Date: 2023-07-18 16:45
 Category: interactive installation
 Tags:  performance
 Slug: the-spiral-of-silence
+Lang: en
 
 
 - **Technique**: Processing, Arduino, 3d print

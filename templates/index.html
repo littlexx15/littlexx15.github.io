@@ -2,17 +2,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <section class="articles-list">
-    {% for article in articles if article.category != 'Drawings' %}
-    <article class="summary">
-      <h3 class="article-title">
-        <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
-      </h3>
-      <p class="metadata">
-        Created: {{ article.date.strftime('%Y-%m-%d') }}
-      </p>
-      {{ article.summary }}
-    </article>
-    {% endfor %}
-  </section>
+
+<!-- 语言切换（首页） -->
+<nav class="lang-switch">
+  <a href="{{ SITEURL }}/zh/" onclick="setPrefLang('zh')">中文</a>
+  <a href="{{ SITEURL or '/' }}" onclick="setPrefLang('en')">EN</a>
+</nav>
+
+<section class="articles-list">
+  {# 同时排除英文 'Drawings' 和中文 '绘画'
+     如果你想改成用 HideHome: true，请把这行改成：
+     {% for article in articles if not article.hidehome %}
+  #}
+  {% for article in articles if article.category not in ['Drawings', '绘画'] %}
+  <article class="summary">
+    <h3 class="article-title">
+      <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+    </h3>
+    <p class="metadata">
+      {% if article.lang == 'zh' %}创建时间{% else %}Created{% endif %}: {{ article.date.strftime('%Y-%m-%d') }}
+    </p>
+    {{ article.summary }}
+  </article>
+  {% endfor %}
+</section>
 {% endblock %}
