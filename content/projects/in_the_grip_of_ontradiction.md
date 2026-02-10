@@ -6,6 +6,5 @@ Slug: in-the-grip-of-contradiction
 Lang: en
 
 
-
 - **Technique**: Blender
 - **Link**: [Watch Full Video](https://youtu.be/CFYk3s_t2pw)

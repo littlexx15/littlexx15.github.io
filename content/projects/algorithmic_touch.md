@@ -1,4 +1,4 @@
-Title: Algorithmic Touch
+Title: 算法触摸
 Date: 2025-06-10 09:00
 Category: Generative AI
 Tags: Python
@@ -9,7 +9,7 @@ Lang: en
   <img src="../images/algorithmic-touch.jpg" alt="Sitting Still">
 </div>
 
-一个皮肤病图像识别与素描化可视化的 Flask 应用：上传病灶照片后输出分类结果与概率分布，并生成风格图像。
+一个用于皮肤病图像分类与辅助识别的应用。
 
-- **Technique**: Python
-- **Link**: [View Source Code](https://github.com/littlexx15/Algorithmic-Touch.git)
+**工具**: Python
+**链接**: [源代码](https://github.com/littlexx15/Algorithmic-Touch.git)
