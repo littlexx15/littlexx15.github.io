@@ -13,5 +13,5 @@ Lang: en
 </div>
 
 
-- **工具**: Processing, Arduino, 3d打印
-- **视频**: [观看视频](https://youtu.be/2Ku8x_Vs4Tk?si=_9pvCaTEMGuaRtxZ)
+ **工具**: Processing, Arduino, 3d打印
+ **链接**: [视频](https://youtu.be/2Ku8x_Vs4Tk?si=_9pvCaTEMGuaRtxZ)
