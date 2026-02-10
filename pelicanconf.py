@@ -62,6 +62,7 @@ CATEGORY_SAVE_AS  = "category/{slug}.html"
 # ──────────────────────────────────────────────────────────
 STATIC_PATHS = [
     "images",             # content/images/
+    "images-2"
     "extra/custom.css",   # content/extra/custom.css
 ]
 
