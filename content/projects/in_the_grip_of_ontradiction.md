@@ -9,8 +9,8 @@ Lang: en
 
 <div class="drawing-gallery">
   <img src="/images-2/contradiction.jpg" alt="in-the-grip-of-contradiction - image 1">
-  <img src="/images-2/scontradiction2.jpg" alt="in-the-grip-of-contradiction - image 2">
-  <img src="/images-2/scontradiction3.jpg" alt="in-the-grip-of-contradiction - image 2">
+  <img src="/images-2/contradiction2.jpg" alt="in-the-grip-of-contradiction - image 2">
+  <img src="/images-2/contradiction3.jpg" alt="in-the-grip-of-contradiction - image 2">
 </div>
 
  **工具**: Blender
