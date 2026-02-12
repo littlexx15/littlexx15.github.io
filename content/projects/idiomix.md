@@ -1,6 +1,6 @@
 Title: 尾词接龙
 Date: 2024-12-05 10:00
-Category: Generative AI
+Category: 生成式AI
 Tags: Python
 Slug: idiomix
 Lang: en

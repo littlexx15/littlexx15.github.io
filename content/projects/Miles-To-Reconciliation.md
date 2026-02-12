@@ -1,6 +1,6 @@
 Title: 和解之路漫漫
 Date: 2023-9-03 16:45
-Category: experimental images
+Category: 影像
 Tags: unity, photography
 Slug: miles-to-reconciliation
 Lang: en

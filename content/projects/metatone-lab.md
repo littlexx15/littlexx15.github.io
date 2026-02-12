@@ -1,6 +1,6 @@
 Title: 元调实验室
 Date: 2025-03-20 10:00
-Category: Generative AI
+Category: 生成式AI
 Tags: Python
 Slug: metatone-lab
 Lang: en

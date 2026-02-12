@@ -1,6 +1,6 @@
 Title: 云上来信
-Date: 2025-12-05 09:00
-Category: AI Film
+Date: 2026-1-05 09:00
+Category: 影像
 Tags: Generative Video, Storytelling, Short Film
 Slug: Letters-on-the-Wind
 Lang: en

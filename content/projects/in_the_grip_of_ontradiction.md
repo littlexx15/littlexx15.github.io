@@ -1,6 +1,6 @@
 Title: 矛盾
 Date: 2022-08-20 10:00
-Category: experimental images
+Category: 影像
 Tags: Blender
 Slug: in-the-grip-of-contradiction
 Lang: en

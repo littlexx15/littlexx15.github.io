@@ -1,6 +1,6 @@
 Title: 好孩子与坏孩子
-Date: 2025-12-05 09:00
-Category: AI Film
+Date: 2026-02-05 09:00
+Category: 影像
 Tags: Generative Video, Storytelling, Short Film
 Slug: good-and-bad-children
 Lang: en
