@@ -7,6 +7,5 @@ Lang: en
 
 围绕三句古老的气象谚语进行IP创作以及AI动画短片制作。
 
-
  **工具**: Midjourney, Nano Banana.
  **链接**: [视频]()

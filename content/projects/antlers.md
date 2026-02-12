@@ -5,7 +5,7 @@ Tags: Python
 Slug: antlers
 Lang: en
 
-用人体与人脸识别技术进行的视觉化探索。
+用人脸识别技术进行的视觉化交互：被识别到的人会“长出鹿角”，但又来无影去无踪。
 
 <div class="drawing-gallery">
   <img src="/images-2/antlers.jpg" alt="antlers - image 1">

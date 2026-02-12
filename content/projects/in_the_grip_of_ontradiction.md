@@ -5,7 +5,7 @@ Tags: Blender
 Slug: in-the-grip-of-contradiction
 Lang: en
 
-作品原名《连接我暴力的两面》，呈现我面对孤独时，用屏幕去填满感官：无止境的消费与沉浸，交织着对虚度时间的恐慌。
+呈现我面对孤独时，用屏幕去填满感官：无止境的消费与沉浸，交织着对虚度时间的恐慌。
 
 <div class="drawing-gallery">
   <img src="/images-2/contradiction.jpg" alt="in-the-grip-of-contradiction - image 1">
