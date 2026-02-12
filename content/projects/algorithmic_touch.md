@@ -6,7 +6,7 @@ Slug: algorithmic-touch
 Lang: en
 
 <div class="drawing-gallery">
-  <img src="/images-2/algorithmic-touch.jpg" alt="algorithmic-touch - image 1">
+  <img src="/images-2/algorithmic-touch.jpeg" alt="algorithmic-touch - image 1">
   <img src="/images-2/algorithmic-touch2.jpg" alt="algorithmic-touch - image 2">
 </div>
 

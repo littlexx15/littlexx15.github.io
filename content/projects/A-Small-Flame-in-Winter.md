@@ -8,8 +8,8 @@ Lang: en
 围绕安徒生童话《卖火柴的小女孩》，探索文生图与视频生成。
 
 <div class="drawing-gallery">
-  <img src="/images-2/girl1.jpeg" alt="a-small-flame-in-winter - image 1">
-  <img src="/images-2/girl2.jpeg" alt="a-small-flame-in-winter - image 2">
+  <img src="/images-2/girl1.jpg" alt="a-small-flame-in-winter - image 1">
+  <img src="/images-2/girl2.jpg" alt="a-small-flame-in-winter - image 2">
 </div>
 
  **工具**: Sora, Nano Banana, ChatGPT
