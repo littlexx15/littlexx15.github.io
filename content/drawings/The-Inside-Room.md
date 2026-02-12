@@ -1,6 +1,6 @@
-Title: 《里屋》The Inside Room
+Title: 《里屋》
 Date: 2020-5-30
-Category: Drawings
+Category: 绘画
 Tags: water color
 Slug: The-Inside-Room
 

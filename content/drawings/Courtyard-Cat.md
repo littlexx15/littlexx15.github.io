@@ -1,6 +1,6 @@
-Title: 《庭院里的猫》Courtyard-Cat
+Title: 《庭院里的猫》
 Date: 2019-11-8
-Category: Drawings
+Category: 绘画
 Tags: Marker
 Slug: Sitting-Still
 

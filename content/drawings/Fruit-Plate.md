@@ -1,6 +1,6 @@
-Title: 《果盘》Fruit Plate
+Title: 《果盘》
 Date: 2020-5-27
-Category: Drawings
+Category: 绘画
 Tags: Sketch
 Slug: Fruit-Plate
 

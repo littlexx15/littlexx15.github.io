@@ -1,6 +1,6 @@
-Title: 《莲》Lotus
+Title: 《莲》
 Date: 2024-8-19
-Category: Drawings
+Category: 绘画
 Tags: Gansai
 Slug: Lotus
 

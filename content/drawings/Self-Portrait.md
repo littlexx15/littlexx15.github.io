@@ -1,6 +1,6 @@
-Title: 《自画像》Self-Portrait
+Title: 《自画像》
 Date: 2021-6-29
-Category: Drawings
+Category: 绘画
 Tags: procreate
 Slug: Self-Portrait
 

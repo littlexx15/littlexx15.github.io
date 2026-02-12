@@ -1,6 +1,6 @@
-Title: 《楼道》Stairwell
+Title: 《楼道》
 Date: 2019-11-7
-Category: Drawings
+Category: 绘画
 Tags: Sketch
 Slug: Stairwell
 

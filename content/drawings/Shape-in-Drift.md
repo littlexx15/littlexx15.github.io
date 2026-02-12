@@ -1,6 +1,6 @@
-Title: 《浮游之形》Shape in Drift
+Title: 《浮游之形》
 Date: 2022-2-16
-Category: Drawings
+Category: 绘画
 Tags: Mixed Media
 Slug: Shape-in-Drift
 

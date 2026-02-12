@@ -1,6 +1,6 @@
-Title: 《一张安稳的睡床》A Peaceful Bed
+Title: 《一张安稳的睡床》
 Date: 2019-11-30
-Category: Drawings
+Category: 绘画
 Tags: Sketch
 Slug: a-peaceful-bed
 

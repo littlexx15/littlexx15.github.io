@@ -1,6 +1,6 @@
-Title: 《小小咒语》The Small Spell
+Title: 《小小咒语》
 Date: 2022-3-1
-Category: Drawings
+Category: 绘画
 Tags: Water color
 Slug: The Small Spell
 

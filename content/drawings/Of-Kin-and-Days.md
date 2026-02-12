@@ -1,6 +1,6 @@
-Title: 《亲缘》 Of Kin and Days
+Title: 《亲缘》 
 Date: 2020-12-30
-Category: Drawings
+Category: 绘画
 Tags: water colcor
 Slug: Of Kin and Days
 
