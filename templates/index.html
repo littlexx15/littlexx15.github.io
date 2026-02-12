@@ -3,7 +3,7 @@
 
 {% block content %}
   <section class="articles-list">
-    {% for article in articles if article.category != 'Drawings' %}
+    {% for article in articles if article.category not in ['Drawings', '绘画'] %}
     <article class="content">
       <h3 class="article-title">
         <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
