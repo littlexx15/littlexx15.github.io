@@ -9,7 +9,7 @@
         <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
       </h3>
       <p class="metadata">
-        Created: {{ article.date.strftime('%Y-%m-%d') }}
+        创作时间: {{ article.date.strftime('%Y-%m-%d') }}
       </p>
       {{ article.content|safe }}
     </article>
