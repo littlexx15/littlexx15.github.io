@@ -5,7 +5,12 @@ Tags: Generative Video, Storytelling, Short Film
 Slug: Letters-on-the-Wind
 Lang: en
 
-围绕三句古老的气象谚语进行IP创作以及AI动画短片制作。
+围绕三句气象谚语进行角色创作以及AI动画短片制作。
+
+<div class="drawing-gallery">
+  <img src="/images-2/letter-from-sky1.jpg" alt="letter-from-sky - image 1">
+  <img src="/images-2/letter-from-sky2.jpg" alt="letter-from-sky - image 2">
+</div>
 
  **工具**: Midjourney, Nano Banana.
  **链接**: [视频]()

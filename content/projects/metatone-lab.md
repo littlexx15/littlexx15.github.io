@@ -1,4 +1,4 @@
-Title: 元调实验室
+Title: 元音实验室
 Date: 2025-03-20 10:00
 Category: 生成式AI
 Tags: Python
