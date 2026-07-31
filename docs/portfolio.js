@@ -45,8 +45,22 @@ const featuredRepos = [
 
 const repoGrid = document.querySelector("#repo-grid");
 
-function displayName(name) {
-  return name.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+const projectCopy = {
+  "prompt-pocket": { title: "提示词口袋", description: "个人提示词管理与案例素材库。" },
+  "feed-video-organizer": { title: "视频素材整理工具", description: "整理信息流视频素材，辅助内容生产与归档。" },
+  "auto-video-mixer": { title: "自动视频混剪工具", description: "Windows 桌面端自动视频混剪工具。" },
+  "video-mixer": { title: "智能视频混剪", description: "视频智能随机混剪与预览剪辑工具。" },
+  "ai-mock-interview": { title: "AI 模拟面试", description: "使用 AI 进行模拟面试与回答练习。" },
+  "metatone-lab": { title: "元音实验室", description: "把绘画内容转化为歌词与歌曲的 AI 跨媒介实验。" },
+  "algorithmic-touch": { title: "算法触摸", description: "皮肤病图像分类与辅助识别实验。" },
+  "idiomix": { title: "尾词接龙", description: "通过成语结尾词衔接下一条成语的聊天机器人。" }
+};
+
+function projectText(repo) {
+  return projectCopy[repo.name.toLowerCase()] || {
+    title: "个人项目",
+    description: "一个持续更新中的个人创作与技术实验。"
+  };
 }
 
 function formatDate(date) {
@@ -54,20 +68,22 @@ function formatDate(date) {
 }
 
 function renderRepos(repos) {
-  repoGrid.innerHTML = repos.slice(0, 6).map((repo, index) => `
+  repoGrid.innerHTML = repos.slice(0, 6).map((repo, index) => {
+    const copy = projectText(repo);
+    return `
     <a class="repo-card" href="${repo.html_url}" target="_blank" rel="noreferrer" aria-label="查看 ${repo.name} 项目">
       <div class="repo-top">
         <span class="repo-index">0${index + 1}</span>
         <span class="repo-arrow" aria-hidden="true">↗</span>
       </div>
-      <h3>${displayName(repo.name)}</h3>
-      <p>${repo.description || "一个持续迭代中的个人创作与技术实验。"}</p>
+      <h3>${copy.title}<small>${repo.name}</small></h3>
+      <p>${copy.description}</p>
       <div class="repo-foot">
         <span class="status">${repo.language || "Creative coding"}</span>
         <span>${formatDate(repo.pushed_at)}</span>
       </div>
     </a>
-  `).join("");
+  `}).join("");
 }
 
 renderRepos(featuredRepos);
