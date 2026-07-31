@@ -163,7 +163,8 @@ h2 { margin: 0; font: 500 clamp(36px, 5vw, 58px)/1.08 var(--serif); letter-spaci
   transition: opacity .3s ease;
 }
 .drawing-card b { font: 500 19px/1.25 var(--serif); }
-.drawing-card small { opacity: .72; }
+.drawing-card b small { display: block; margin-top: 3px; font: 500 11px/1.3 var(--sans); letter-spacing: .04em; opacity: .72; }
+.drawing-card em { font: normal 11px var(--sans); opacity: .72; }
 .drawing-card:hover img { transform: scale(1.035); filter: saturate(1.06); }
 .drawing-card:hover span, .drawing-card:focus-visible span { opacity: 1; }
 
@@ -178,6 +179,7 @@ h2 { margin: 0; font: 500 clamp(36px, 5vw, 58px)/1.08 var(--serif); letter-spaci
 .repo-index { font: 500 13px var(--serif); opacity: .7; }
 .repo-arrow { font-size: 22px; line-height: 1; }
 .repo-card h3 { margin: 35px 0 10px; font: 500 25px/1.2 var(--serif); }
+.repo-card h3 small { display: block; margin-top: 7px; color: #91a299; font: 600 11px/1.3 var(--sans); letter-spacing: .06em; }
 .repo-card p { margin: 0; color: #aebbb4; font-size: 14px; }
 .repo-foot { margin-top: auto; padding-top: 28px; display: flex; justify-content: space-between; color: #91a299; font-size: 12px; }
 .status { display: flex; align-items: center; gap: 7px; }
@@ -195,6 +197,8 @@ h2 { margin: 0; font: 500 clamp(36px, 5vw, 58px)/1.08 var(--serif); letter-spaci
 .footer h2 { max-width: 690px; }
 .footer-links { display: flex; gap: 18px; }
 .copyright { margin-top: 60px; padding-top: 20px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,.22); font-size: 12px; opacity: .75; }
+.archive-hero { padding: 105px 0 55px; }
+.archive-hero h1 { margin: 8px 0 18px; }
 
 @media (max-width: 900px) {
   .hero-grid, .featured-grid, .about-grid { grid-template-columns: 1fr; }
