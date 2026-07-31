@@ -128,6 +128,45 @@ h2 { margin: 0; font: 500 clamp(36px, 5vw, 58px)/1.08 var(--serif); letter-spaci
 .art-grid { margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .art-grid .work-card { min-height: 350px; }
 
+.drawing-section { background: rgba(255,255,255,.36); }
+.drawing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: dense;
+  gap: 16px;
+}
+.drawing-card {
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #e4dfd3;
+}
+.drawing-card.drawing-tall { grid-row: span 2; min-height: 676px; }
+.drawing-card.drawing-wide { grid-column: span 2; }
+.drawing-card img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform .65s cubic-bezier(.2,.8,.2,1), filter .35s ease;
+}
+.drawing-card span {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 54px 18px 16px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  color: white;
+  background: linear-gradient(transparent, rgba(12,18,15,.78));
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.drawing-card b { font: 500 19px/1.25 var(--serif); }
+.drawing-card small { opacity: .72; }
+.drawing-card:hover img { transform: scale(1.035); filter: saturate(1.06); }
+.drawing-card:hover span, .drawing-card:focus-visible span { opacity: 1; }
+
 .repo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .repo-card {
   min-height: 250px; padding: 26px; display: flex; flex-direction: column;
@@ -163,6 +202,7 @@ h2 { margin: 0; font: 500 clamp(36px, 5vw, 58px)/1.08 var(--serif); letter-spaci
   .hero-art { width: min(520px, 90%); margin: auto; }
   .repo-grid { grid-template-columns: repeat(2, 1fr); }
   .art-grid { grid-template-columns: repeat(2, 1fr); }
+  .drawing-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { gap: 35px; }
 }
 @media (max-width: 600px) {
@@ -177,6 +217,10 @@ h2 { margin: 0; font: 500 clamp(36px, 5vw, 58px)/1.08 var(--serif); letter-spaci
   .section { padding: 72px 0; }
   .section-head { align-items: start; flex-direction: column; }
   .featured-grid, .art-grid, .repo-grid { grid-template-columns: 1fr; }
+  .drawing-grid { grid-template-columns: 1fr; }
+  .drawing-card, .drawing-card.drawing-tall { min-height: 420px; grid-row: auto; }
+  .drawing-card.drawing-wide { grid-column: auto; }
+  .drawing-card span { opacity: 1; }
   .work-card, .work-card.small { min-height: 410px; }
   .art-grid .work-card { min-height: 330px; }
   .footer-line { align-items: start; flex-direction: column; }
