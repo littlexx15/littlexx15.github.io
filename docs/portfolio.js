@@ -46,6 +46,10 @@ const featuredRepos = [
 const repoGrid = document.querySelector("#repo-grid");
 
 const projectCopy = {
+  "fruit-tasting-clip-extractor": {
+    title: "人物试吃片段智能截取",
+    description: "本地识别人物咬水果的关键瞬间，自动导出约 2.2 秒试吃片段，视频无需上传云端。"
+  },
   "prompt-pocket": { title: "提示词口袋", description: "个人提示词管理与案例素材库。" },
   "feed-video-organizer": { title: "视频素材整理工具", description: "整理信息流视频素材，辅助内容生产与归档。" },
   "auto-video-mixer": { title: "自动视频混剪工具", description: "Windows 桌面端自动视频混剪工具。" },
@@ -57,9 +61,18 @@ const projectCopy = {
 };
 
 function projectText(repo) {
-  return projectCopy[repo.name.toLowerCase()] || {
-    title: "个人项目",
-    description: "一个持续更新中的个人创作与技术实验。"
+  const preset = projectCopy[repo.name.toLowerCase()];
+  if (preset) return preset;
+
+  const descriptions = (repo.description || "")
+    .split(/\s*\/\s*/)
+    .map(text => text.trim())
+    .filter(Boolean);
+  const chineseDescription = descriptions.find(text => /[\u3400-\u9fff]/.test(text));
+
+  return {
+    title: repo.name.replace(/[-_]+/g, " "),
+    description: chineseDescription || repo.description || "暂无项目介绍，点击卡片查看仓库详情。"
   };
 }
 
